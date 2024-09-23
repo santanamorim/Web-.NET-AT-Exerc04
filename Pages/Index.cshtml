@@ -1,0 +1,28 @@
+﻿@page
+@model ProductApp.Pages.IndexModel
+@{
+    ViewData["Title"] = "Lista de Produtos";
+}
+
+<h2>Lista de Produtos</h2>
+
+<ul>
+    @foreach (var product in Model.Products)
+    {
+        <li>@product</li>
+    }
+</ul>
+
+<hr />
+
+<h3>Adicionar Novo Produto</h3>
+
+<form method="post">
+    <div>
+        <label for="newProduct">Nome do Produto:</label>
+        <input type="text" id="newProduct" name="NewProduct" />
+    </div>
+    <div>
+        <button type="submit">Adicionar Produto</button>
+    </div>
+</form>
